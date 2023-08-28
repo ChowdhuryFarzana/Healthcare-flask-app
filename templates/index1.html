@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ML APP</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persistent Symptoms Detection</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link your custom stylesheet -->
+    <link rel="stylesheet" href="/Users/farzanachowdhury/healthcare project/static/css/styles.css">
+</head>
+<body>
+    <header class="bg-primary py-3 text-white text-center">
+        <div class="container">
+            <h1>Persistency Prediction App</h1>
+        </div>
+    </header>
+    <div class="container d-flex justify-content-center align-items-center vh-100" style="margin-top:170px;">
+        <div class="col-md-6">
+    <form action="/predict" method="post" class="needs-validation" novalidate>
+        <div class="form-group row">
+        <label for="IsFemale">Gender:</label>
+        
+        <input type="number" step="1" name="IsFemale" class="form-control form-control-sm" placeholder="If patient is female, enter 1. If male, enter 0"><br>
+
+        
+        <label for="IsCaucasian">Race:</label>
+        <input type="number" step="1" name="IsCaucasian" class="form-control form-control-sm" placeholder="If patient is Caucasian, enter 1. If not, enter 0"><br>
+        
+        <label for="IsNonHispanic">Ethnicity:</label>
+        <input type="number"  step="1" name="IsNonHispanic" class="form-control form-control-sm" placeholder="If patient is Hispanic, enter 1. If not, enter 0"><br>
+        
+        <label for="IsAgeGroup1">Age Group >75:</label>
+        <input type="number"  step="1" name="IsAgeGroup1" class="form-control form-control-sm" placeholder="If patient is >75, enter 1. If not, enter 0"><br>
+        
+        <label for="IsAgeGroup2">Age Group 65-75:</label>
+        <input type="number"  step="1" name="IsAgeGroup2" class="form-control form-control-sm" placeholder="If patient is 65-75, enter 1. If not, enter 0"><br>
+        
+        <label for="IsAgeGroup3">Age Group 55-65:</label>
+        <input type="number"  step="1" name="IsAgeGroup3" class="form-control form-control-sm" placeholder="If patient is 55-65, enter 1. If not, enter 0"><br>
+        
+        <label for="IsGeneralPractitioner">General Practitioner:</label>
+        <input type="number" step="1" name="IsGeneralPractitioner" class="form-control form-control-sm" placeholder="If patient is General Practitioner, enter 1. If not, enter 0"><br>
+        
+        <label for="IsNonSpecialist">Non-Specialist:</label>
+        <input type="number" step="1" name="IsNonSpecialist" class="form-control form-control-sm" placeholder="If patient is non-specialist, enter 1. If not, enter 0"><br>
+        
+        <label for="IsOBGYNorPCP">OBGYN or PCP:</label>
+        <input type="number"  step="1" name="IsOBGYNorPCP" class="form-control form-control-sm" placeholder="If patient is OBGYNorPCP, enter 1. If not, enter 0"><br>
+        
+        <label for="IsLowRiskPrior">Low Risk Prior:</label>
+        <input type="number" step="1" name="IsLowRiskPrior" class="form-control form-control-sm" placeholder="If patient is Low Risk Prior, enter 1. If not, enter 0"><br>
+        
+        <label for="IsLowRiskDuring">Low Risk During Rx:</label>
+        <input type="number" step="1" name="IsLowRiskDuring" class="form-control form-control-sm" placeholder="If patient is Low Risk During, enter 1. If not, enter 0"><br>
+        
+        <label for="IsChangeRiskUnknown">Change Risk Unknown:</label>
+        <input type="number" step="1" name="IsChangeRiskUnknown" class="form-control form-control-sm" placeholder="If patient has Change Risk Unknown, enter 1. If not, enter 0"><br>
+        
+        <label for="IsChangeTScoreUnknown">Change T-Score Unknown:</label>
+        <input type="number" step="1" name="IsChangeTScoreUnknown" class="form-control form-control-sm" placeholder="If patient has Change TS core Unknown, enter 1. If not, enter 0"><br>
+        
+        <label for="IsAdherent">Adherent:</label>
+        <input type="number" step="1" name="IsAdherent" class="form-control form-control-sm" placeholder="If patient is Adherent, enter 1. If not, enter 0"><br>
+        
+        <div class="form-group row" style="margin-bottom:100px; margin-top:20px;" >
+            <div class="col-sm-6 offset-sm-6">
+                <button type="submit" class="btn btn-primary mb-3">Predict</button> <!-- Added mb-3 class here -->
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </form>
+</div>
+    {% if prediction_text %}
+    <div class ="result mt-3 mb-6 text-center" ><p class="display-4">{{ prediction_text }}</p></div>
+    {% endif %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

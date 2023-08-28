@@ -1,0 +1,32 @@
+/* Set background color */
+body {
+    background-color: #ffdddd; /* Change to your desired background color */
+}
+
+/* Change header background and text color */
+.header {
+    background-color: #343a40; /* Change to your desired header background color */
+    color: white; /* Change to your desired header text color */
+}
+
+/* Change font size for labels */
+label {
+    font-size: 14px; /* Change to your desired font size */
+}
+
+/* Change font size for input fields */
+.form-control {
+    font-size: 14px; /* Change to your desired font size */
+}
+
+/* Change button color */
+.btn-primary {
+    background-color: #007bff; /* Change to your desired button background color */
+    border-color: #007bff; /* Change to your desired button border color */
+    color: white; /* Change to your desired button text color */
+}
+
+/* Add margin to prediction result */
+.result {
+    margin-top: 20px; /* Adjust the margin as needed */
+}
