@@ -4,12 +4,11 @@
 This project is a Flask-based web application designed to predict patient persistence in healthcare using a Random Forest model. The app leverages exploratory data analysis (EDA) and feature engineering to enhance prediction accuracy and provides a user-friendly interface for accessing machine learning insights.
 
 # Features
-## Predictive Model: Uses a Random Forest algorithm to predict patient persistence based on provided data.
-## Data Analysis: Integrated exploratory data analysis to visualize trends and understand dataset characteristics.
-## Feature Engineering: Includes preprocessing techniques to prepare raw data for robust model performance.
-## Web Interface: Built with Flask, allowing users to input data and receive predictions in real-time.
-Tools & Libraries
-
+Predictive Model: Uses a Random Forest algorithm to predict patient persistence based on provided data.
+Data Analysis: Integrated exploratory data analysis to visualize trends and understand dataset characteristics.
+Feature Engineering: Includes preprocessing techniques to prepare raw data for robust model performance.
+Web Interface: Built with Flask, allowing users to input data and receive predictions in real-time.
+## Tools & Libraries
 Programming Language: Python
 Frameworks: Flask
 Libraries:
